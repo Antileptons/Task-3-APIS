@@ -7,6 +7,13 @@ settings:
 importers:
 
   .:
+    dependencies:
+      zod:
+        specifier: ^3.23.8
+        version: 3.23.8
+      zoro:
+        specifier: ^0.5.0
+        version: 0.5.0
     devDependencies:
       '@playwright/test':
         specifier: ^1.49.0
@@ -25,10 +32,17 @@ packages:
   '@types/node@22.10.0':
     resolution: {integrity: sha512-XC70cRZVElFHfIUB40FgZOBbgJYFKKMa5nb9lxcwYstFG/Mi+/Y0bGS+rs6Dmhmkpq4pnNiLiuZAbc02YCOnmA==}
 
+  async@0.9.2:
+    resolution: {integrity: sha512-l6ToIJIotphWahxxHyzK9bnLR6kM4jJIIgLShZeqLY7iboHoGkdgFl7W2/Ivi4SkMJYGKqW8vSuk0uKUj6qsSw==}
+
   fsevents@2.3.2:
     resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
+
+  lodash@2.4.2:
+    resolution: {integrity: sha512-Kak1hi6/hYHGVPmdyiZijoQyz5x2iGVzs6w9GYB/HiXEtylY7tIoYEROMjvM1d9nXJqPOrG2MNPMn01bJ+S0Rw==}
+    engines: {'0': node, '1': rhino}
 
   playwright-core@1.49.0:
     resolution: {integrity: sha512-R+3KKTQF3npy5GTiKH/T+kdhoJfJojjHESR1YEWhYuEKRVfVaxH3+4+GvXE5xyCngCxhxnykk0Vlah9v8fs3jA==}
@@ -43,6 +57,12 @@ packages:
   undici-types@6.20.0:
     resolution: {integrity: sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg==}
 
+  zod@3.23.8:
+    resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
+
+  zoro@0.5.0:
+    resolution: {integrity: sha512-0Fwd+PyKeexMCtAoy0DSrfDh3/4k09fv64DVA6bpwEWrS3K+6zP3EE8sK18YG1khzWzH4vYEzkSGhjQUi95Nog==}
+
 snapshots:
 
   '@playwright/test@1.49.0':
@@ -53,8 +73,12 @@ snapshots:
     dependencies:
       undici-types: 6.20.0
 
+  async@0.9.2: {}
+
   fsevents@2.3.2:
     optional: true
+
+  lodash@2.4.2: {}
 
   playwright-core@1.49.0: {}
 
@@ -65,3 +89,10 @@ snapshots:
       fsevents: 2.3.2
 
   undici-types@6.20.0: {}
+
+  zod@3.23.8: {}
+
+  zoro@0.5.0:
+    dependencies:
+      async: 0.9.2
+      lodash: 2.4.2
